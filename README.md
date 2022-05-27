@@ -135,14 +135,31 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		# vim test_domain.com
 	
 	Add following configuration in your file
-```
-	 server {
-	        listen 80;
-	        listen [::]:80;
-	        root /var/www/test_domain.com/;
-	        index index.html index.htm index.nginx-debian.html;
-	        server_name test_domain.com www.test_domain.com;
-	        location / {
-	        }
-	    }
-```
+	```
+		 server {
+			listen 80;
+			listen [::]:80;
+			root /var/www/test_domain.com/;
+			index index.html index.htm index.nginx-debian.html;
+			server_name test_domain.com www.test_domain.com;
+			location / {
+			}
+		    }
+	```
+
+  	vii. Create Symbolic Link for Nginx to link website flagging it as active and accessible
+
+		# ln -s /etc/nginx/sites-available/test_domain.com /etc/nginx/sites-enabled
+
+	viii. Restart nginx				
+
+		# sudo systemctl restart nginx
+
+	ix. Test the Configuration			
+
+		# nginx -t
+
+	x. Modify the Hosts File and Add following line:  
+
+		ubuntu_ip test_domain.com www.test_domain.com
+		# vim /etc/hosts
