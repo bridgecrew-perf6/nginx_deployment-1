@@ -28,11 +28,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 
 	i. Install openssh server on ubuntu vm	
 	
-		#apt install openssh-server 
+		# apt install openssh-server 
 		
 	ii. View status of server 	
 			
-		#systemctl status ssh
+		# systemctl status ssh
 		
 
 		
