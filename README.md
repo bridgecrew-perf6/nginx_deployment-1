@@ -1,9 +1,9 @@
 # Website Hosting simple and with IAC
 This is a way to install and set up Nginx, on Ubuntu 20.04.
- 1. First we will do it manually
- 2. Than we will use bash script for whole process.
+ A. First we will do it manually
+ B. Than we will use bash script for whole process.
 
-## Manual website Hosting
+## A. Manual website Hosting
 
 > Note:
 Ubuntu Installation
@@ -34,6 +34,19 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 			
 		# systemctl status ssh
 		
+	iii. Allow port 22 in ufw for ssh		
+		
+		# sudo ufw allow ssh
+	
+	iv. Open ssh configuration file and add following switch
+		File path: /etc/ssh/sshd_config
+		
+		PermitRootLogin yes
+			
+	v. To access mac OS remotely, open terminal and type
+		
+		# sudo ssh root@ubuntu_ip
+
 
 		
 
