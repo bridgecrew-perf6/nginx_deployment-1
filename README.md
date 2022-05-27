@@ -183,11 +183,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 
 1. Create bash file					
 
-		#touch /root/nginx_script.sh
+		# touch /root/nginx_script.sh
 
 2. Allow permissions					
 	
-		#chmod u+x nginx_script.sh
+		# chmod u+x nginx_script.sh
 
 3. Paste following script inside nginx_script.sh
 
@@ -217,7 +217,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		ln -s /etc/nginx/sites-available/test_domain.com /etc/nginx/sites-enabled
 		sudo systemctl restart nginx
 		cat <<< "10.4.106.83 test_domain.com www.test_domain.com # $(cat /etc/hosts)" > /etc/hosts
-		echo "Test your website Bro - Deployment Successful”
+		echo "Congrats Now test your website - Deployment is Successful”
 ```
 4. To run the code:					
 
