@@ -5,19 +5,20 @@ This is a way to install and set up Nginx, on Ubuntu 20.04.
 
 ## A. Manual website Hosting
 
-	Following things must be deployed to implement this project
+	Following things must be installed and running to implement this project
 	Host Machine:			Macbook
 	Virtualization Platform: 	VMWare Fusion 12.3
 	Virtual Machine:		Ubuntu 20.04
 	Web Server:			Nginx
 
-Follow this link to check,
+Follow this link for help,
 How to Install Ubuntu 20.04 on a Mac using VirtualBox
 ```
 https://medium.com/tech-lounge/how-to-install-ubuntu-on-mac-using-virtualbox-3a26515aa869
 ```
 
-Follow this link to check, nginx installation on ubuntu 20.04
+Follow this link  for help, 
+Nginx installation on ubuntu 20.04
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
 ```
