@@ -47,6 +47,28 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		
 		# sudo ssh root@ubuntu_ip
 
-
+3. Update your ubuntu VM				
 		
+		# apt-get update -y
 
+4. Install nginx server					
+		
+		# apt-get install nginx -y
+
+	Some important commands you may need:
+
+	View version									
+			
+		# nginx -v
+
+	View nginx status								
+		
+		# systemctl status nginx
+	
+	Enable nginx on startup							
+		
+		# systemctl enable nginx
+	
+	Restart nginx 									
+		
+		# systemctl restart nginx
