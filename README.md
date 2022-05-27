@@ -28,33 +28,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 
 	i. Install openssh server on ubuntu vm	
 	
-		```
 		#apt install openssh-server 
-		```	
 		
 	ii. View status of server 	
-	
-		```
-		#systemctl status ssh
-		```
-		
-	iii. Allow port 22 in ufw for ssh	
-	
-		```
-		#sudo ufw allow ssh
-		```
-		
-	iv. Open ssh configuration file and add following switch
-		File path: /etc/ssh/sshd_config
-		
-			```
-			PermitRootLogin yes
-			```
 			
-	v. To access mac OS remotely, open terminal and type
-	
-		```
-		#sudo ssh root@ubuntu_ip
-		```
+		#systemctl status ssh
+		
+
 		
 
