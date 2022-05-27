@@ -89,4 +89,15 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		
 	Restart ufw to update rules edited		 									
 		
-		#ufw reload
+		# ufw reload
+		
+6. Verify that base OS is connected(LAN) with ubuntu vm
+
+		# ping host OS ip
+
+7. Test nginx response on terminal			
+
+		# curl -i 127.0.0.1
+
+8. Test nginx response on base OS via browser	
+> 	Hint:	Enter ip of ubuntu vm in your browser it’ll load nginx welcome page 
