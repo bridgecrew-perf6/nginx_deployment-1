@@ -161,5 +161,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 
 	x. Modify the Hosts File and Add following line:  
 
-		ubuntu_ip test_domain.com www.test_domain.com
+	x. Open Hosts file and add create following entry:  
+		
 		# vim /etc/hosts
+		ubuntu_IP test_domain.com www.test_domain.com
+	
+10. Now open 'hosts' file and add create following entry:			
+
+		# vim /etc/hosts
+		sample: ubuntu_ip test_domain.com www.test_domain.com
+
+	> 	Note: This is necessary so that host OS will go to the given ip to resolve web address which is in my case test_web.com
