@@ -34,7 +34,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		```
 		#systemctl status ssh
 		```
-	iii. Allow port 22 in ufw for ssh		
+	iii. Allow port 22 in ufw for ssh	
 		```
 		#sudo ufw allow ssh
 		```
