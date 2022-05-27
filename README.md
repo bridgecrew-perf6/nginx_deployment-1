@@ -130,13 +130,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		
 		# cp default test_domain.com
 
-	vi Open and edit server block as follows:
+	vi. Open and edit server block as follows:
 
 		# vim test_domain.com
 	
 	Add following configuration in your file
 	
-	server {
+	> server {
 	        listen 80;
 	        listen [::]:80;
 	        root /var/www/test_domain.com/;
