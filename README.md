@@ -40,12 +40,16 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		```
 		#sudo ufw allow ssh
 		```
+		
 	iv. Open ssh configuration file and add following switch
 		File path: /etc/ssh/sshd_config
 			```
 			PermitRootLogin yes
 			```
+			
 	v. To access mac OS remotely, open terminal and type
 		```
 		#sudo ssh root@ubuntu_ip
 		```
+		
+
