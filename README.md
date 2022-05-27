@@ -136,7 +136,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 	
 	Add following configuration in your file
 ```
-	> server {
+	 server {
 	        listen 80;
 	        listen [::]:80;
 	        root /var/www/test_domain.com/;
