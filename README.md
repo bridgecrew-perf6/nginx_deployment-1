@@ -164,11 +164,63 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 	x. Open Hosts file and add create following entry:  
 		
 		# vim /etc/hosts
-		ubuntu_IP test_domain.com www.test_domain.com
+
+>		Note: sample: ubuntu_IP test_domain.com www.test_domain.com
 	
 10. Now open 'hosts' file and add create following entry:			
 
 		# vim /etc/hosts
-		sample: ubuntu_ip test_domain.com www.test_domain.com
+		
+>		Note: sample: ubuntu_IP test_domain.com www.test_domain.com
 
-	> 	Note: This is necessary so that host OS will go to the given ip to resolve web address which is in my case test_web.com
+> 	Note: This is necessary so that host OS will go to the given ip to resolve web address which is in my case test_web.com
+
+11. Now goto your brower on host OS and enter test_domain.com
+	Your hosted website will be up and running.
+	
+
+## B. Hosting Via Bash(IaaC)
+
+1. Create bash file					
+
+		#touch /root/nginx_script.sh
+
+2. Allow permissions					
+	
+		#chmod u+x nginx_script.sh
+
+3. Paste following script inside nginx_script.sh
+
+```
+		#! usr/bin/bash
+		apt-get update -y
+		apt-get install nginx -y
+		nginx -v
+		systemctl enable nginx
+		curl -i 127.0.0.1
+		ufw enable
+		ufw allow 'nginx Full'
+		ufw reload
+		mkdir -p /var/www/test_domain.com/
+		chown -R $USER:$USER /var/www/test_domain.com/
+		chmod -R 755 /var/www/test_domain.com/
+		git clone https://github.com/arvind37/Basic-Website-using-HTML-CSS/ /var/www/test_domain.com/
+		echo "server {
+		        listen 80;
+		        listen [::]:80;
+		        root /var/www/test_domain.com/;
+		        index index.html index.htm index.nginx-debian.html;
+		        server_name test_domain.com www.test_domain.com;
+		        location / {
+		        }
+		    }" >> /etc/nginx/sites-available/test_domain.com
+		ln -s /etc/nginx/sites-available/test_domain.com /etc/nginx/sites-enabled
+		sudo systemctl restart nginx
+		cat <<< "10.4.106.83 test_domain.com www.test_domain.com # $(cat /etc/hosts)" > /etc/hosts
+		echo "Test your website Bro - Deployment Successful”
+```
+4. To run the code:					
+
+		# bash nginx_script.sh
+
+>	Note: You will be prompted upon firewall enabling if you are running this script remotely, press ‘y’ on prompt.The prompt is for confirmation if the connection gets interrupted so we allow it to enable the firewall even if it gets disconnected.
