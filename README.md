@@ -100,4 +100,49 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		# curl -i 127.0.0.1
 
 8. Test nginx response on base OS via browser	
-> 	Hint:	Enter ip of ubuntu vm in your browser it’ll load nginx welcome page 
+	> 	Hint:	Enter ip of ubuntu vm in your browser it’ll load nginx welcome page 
+
+9. Host a website on your nginx server by Configuring a Server Block
+
+	i. Make directory for your website			
+
+		# mkdir -p /var/www/test_domain.com/html
+
+	> Note: Move your website in this directory
+
+	ii. Configure Ownership and Permissions			
+
+		# chown -R $USER:$USER /var/www/test_domain.com
+		# chmod -R 755 /var/www/test_domain.com			
+		
+	iii. Download your website in the directory test_domain.com	
+
+		# git clone <url/> <target_folder/>
+
+	> Hint: git clone https://github.com/arvind37/Basic-Website-using-HTML-CSS/ /var/www/test_domain.com/
+
+
+	iv. Move to directory		
+		
+		# cd /etc/nginx/sites-available
+
+	v. Copy default server block as test_domain.com		
+		
+		# cp default test_domain.com
+
+	vi Open and edit server block as follows:
+
+		# vim test_domain.com
+	
+	Add following configuration in your file
+	'''
+	server {
+	        listen 80;
+	        listen [::]:80;
+	        root /var/www/test_domain.com/;
+	        index index.html index.htm index.nginx-debian.html;
+	        server_name test_domain.com www.test_domain.com;
+	        location / {
+	        }
+	    }
+	'''
