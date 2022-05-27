@@ -1,7 +1,7 @@
 # Website Hosting simple and with IAC
 This is a way to install and set up Nginx, on Ubuntu 20.04.
-### A. First we will do it manually
-### B. Than we will use bash script for whole process.
+#### A. First we will do it manually
+#### B. Than we will use bash script for whole process.
 
 ## A. Manual website Hosting
 
