@@ -135,7 +135,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 		# vim test_domain.com
 	
 	Add following configuration in your file
-	'''
+	
 	server {
 	        listen 80;
 	        listen [::]:80;
@@ -145,4 +145,4 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 	        location / {
 	        }
 	    }
-	'''
+	
