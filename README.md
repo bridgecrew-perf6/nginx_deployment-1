@@ -106,7 +106,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-
 
 	i. Make directory for your website			
 
-		# mkdir -p /var/www/test_domain.com/html
+		# mkdir -p /var/www/test_domain.com/
 
 	> Note: Move your website in this directory
 
